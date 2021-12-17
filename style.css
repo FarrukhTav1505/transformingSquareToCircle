@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: hsl(73, 100%, 50%);
+}
+.background{
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.square{
+   margin: 0 auto;
+   width: 400px;
+   height: 400px;
+   background-color: fuchsia;
+   align-items: center;
+   transition: 2.5s;
+}
+.square.circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: orange;
+    transition: 2.5s;
+}
+.square{
+    animation:moving 2s infinite
+}
+.square.circle{
+    animation:moving 2s infinite
+}
+
+@keyframes moving {
+   0%{   
+    transform: scale3d(1,1,1);
+    }
+   50%{   
+    transform: scale3d(1.05,1.05,1.05);
+    }
+   100%{   
+    transform: scale3d(1,1,1);
+    }
+}
+
